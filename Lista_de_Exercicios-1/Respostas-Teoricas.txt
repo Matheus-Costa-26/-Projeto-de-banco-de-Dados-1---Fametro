@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. Explique a importância da modelagem conceitual no processo de desenvolvimento de
 sistemas de informação. Relacione sua resposta com a independência de dados e a
 comunicação entre usuários e desenvolvedores.
@@ -23,3 +24,6 @@ R:	O relacionamento ternário é uma associação única e simultânea entre tr�
 representá-los e quando é recomendável normalizar sua representação.
 
 R:	**Resumo:** Atributos **multivalorados** representam uma característica da entidade que pode possuir mais de um valor simultâneo (ex.: números de telefone de uma pessoa), sendo representados no MER por um elipse de contorno duplo. Já os atributos **derivados** são aqueles cujos valores podem ser calculados a partir de outros atributos ou entidades (ex.: idade a partir da data de nascimento), representados por uma elipse tracejada. É altamente recomendável normalizar (transformar em uma nova entidade) os atributos multivalorados para eliminar a redundância e facilitar consultas, criando uma nova tabela no modelo relacional. A normalização de atributos derivados, por outro lado, é uma decisão de projeto, frequentemente mantidos na própria tabela para performance, desde que a lógica de cálculo seja bem gerenciada pela aplicação.
+=======
+QT.1 - A modelagem conceitual é uma etapa fundamental no projeto de sistemas de informação, pois define a estrutura lógica dos dados e seus relacionamentos, independentemente de implementações técnicas, garantindo independência de dados no qual proporciona flexibilidade para alterações no esquema físico sem impactar a lógica de negócio, portabilidade entre diferentes SGBDs e manutenção na evolução do sistema e facilitando a comunicação entre usuários e desenvolvedores ao servir como uma linguagem comum não técnica, permitindo a validação de requisitos e a redução de informações desnecessárias por meio de diagramas conceituais que representam visualmente as regras de negócio e os relacionamentos entre entidades.
+>>>>>>> ba9f8abdfc19911fb4c066c74497b105ecdf726e
