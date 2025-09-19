@@ -1,2 +1,25 @@
-QT.1 - A modelagem conceitual é uma etapa fundamental no projeto de sistemas de informação, pois define a estrutura lógica dos dados e seus relacionamentos, independentemente de implementações técnicas, garantindo independência de dados no qual proporciona flexibilidade para alterações no esquema físico sem impactar a lógica de negócio, portabilidade entre diferentes SGBDs e manutenção na evolução do sistema e facilitando a comunicação entre usuários e desenvolvedores ao servir como uma linguagem comum não técnica, permitindo a validação de requisitos e a redução de informações desnecessárias por meio de diagramas conceituais que representam visualmente as regras de negócio e os relacionamentos entre entidades.
+1. Explique a importância da modelagem conceitual no processo de desenvolvimento de
+sistemas de informação. Relacione sua resposta com a independência de dados e a
+comunicação entre usuários e desenvolvedores.
 
+R:	A modelagem conceitual é uma etapa fundamental no projeto de sistemas de informação, pois define a estrutura lógica dos dados e seus relacionamentos, independentemente de implementações técnicas, garantindo independência de dados no qual proporciona flexibilidade para alterações no esquema físico sem impactar a lógica de negócio, portabilidade entre diferentes SGBDs e manutenção na evolução do sistema e facilitando a comunicação entre usuários e desenvolvedores ao servir como uma linguagem comum não técnica, permitindo a validação de requisitos e a redução de informações desnecessárias por meio de diagramas conceituais que representam visualmente as regras de negócio e os relacionamentos entre entidades.
+
+2. Diferencie entidade forte de entidade fraca. Forneça um exemplo prático de cada uma
+em um sistema de gestão acadêmica.
+
+R:	Uma entidade forte existe independente de outra entidade, como a entidade ALUNO, ela tem suas atribuições que depende da chave primaria que é o ALUNO, as entidades fracas seriam a MATRICULA, DISCIPLINA, CPF ...
+
+3. Defina e compare os conceitos de chave primária, chave candidata e superchave.
+Explique por que a escolha correta da chave primária é fundamental.
+
+R:	Uma superchave é qualquer conjunto de atributos que identifica tuplas de forma única, enquanto uma chave candidata é uma superchave mínima (irredutível). A escolha correta é fundamental porque a chave primária é a âncora que garante a integridade e consistência dos dados, assegura a unicidade dos registros e estabelece os relacionamentos (chaves estrangeiras) com outras tabelas, impactando diretamente a performance, a manutenção e a confiabilidade do sistema.
+
+4. O que são relacionamentos ternários em um modelo entidade-relacionamento (MER)?
+Dê um exemplo de situação em que esse tipo de relacionamento é necessário.
+
+R:	O relacionamento ternário é uma associação única e simultânea entre três entidades diferentes. Ele captura uma interação onde a ocorrência do fato depende das três entidades ao mesmo tempo. Um exemplo é necessário é o relacionamento entre Paciente, Médico e Medicamento: uma única instância do relacionamento (uma prescrição) só existe quando um médico específico prescreve um medicamento específico para um paciente específico, sendo que a informação completa só faz sentido com a combinação dos três.
+
+5. Descreva o papel dos atributos multivalorados e derivados em um MER. Explique como
+representá-los e quando é recomendável normalizar sua representação.
+
+R:	**Resumo:** Atributos **multivalorados** representam uma característica da entidade que pode possuir mais de um valor simultâneo (ex.: números de telefone de uma pessoa), sendo representados no MER por um elipse de contorno duplo. Já os atributos **derivados** são aqueles cujos valores podem ser calculados a partir de outros atributos ou entidades (ex.: idade a partir da data de nascimento), representados por uma elipse tracejada. É altamente recomendável normalizar (transformar em uma nova entidade) os atributos multivalorados para eliminar a redundância e facilitar consultas, criando uma nova tabela no modelo relacional. A normalização de atributos derivados, por outro lado, é uma decisão de projeto, frequentemente mantidos na própria tabela para performance, desde que a lógica de cálculo seja bem gerenciada pela aplicação.
