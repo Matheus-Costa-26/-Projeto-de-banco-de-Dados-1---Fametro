@@ -1,0 +1,48 @@
+ENTIDADES PRINCIPAIS:
+1. USUARIO
+•	id_usuario (PK)
+•	nome
+•	email (UK)
+•	senha
+•	telefone
+•	data_cadastro
+•	tipo ('Cliente', 'Administrador')
+2. CLIENTE (Especialização de USUARIO)
+•	id_cliente (PK, FK para USUARIO)
+•	cpf (UK)
+•	data_nascimento
+•	endereco_entrega
+3. PRODUTO
+•	id_produto (PK)
+•	nome
+•	descricao
+•	preco
+•	estoque
+•	categoria_id (FK)
+•	marca
+•	ativo (boolean)
+4. CATEGORIA
+•	id_categoria (PK)
+•	nome
+•	descricao
+•	categoria_pai_id (FK para auto-relacionamento)
+5. PEDIDO
+•	id_pedido (PK)
+•	cliente_id (FK)
+•	data_pedido
+•	status ('Pendente', 'Confirmado', 'Enviado', 'Entregue', 'Cancelado')
+•	total
+•	endereco_entrega
+6. ITEM_PEDIDO
+•	pedido_id (PK, FK)
+•	produto_id (PK, FK)
+•	quantidade
+•	preco_unitario
+•	subtotal
+7. PAGAMENTO
+•	id_pagamento (PK)
+•	pedido_id (FK)
+•	metodo ('Cartão', 'Boleto', 'PIX')
+•	valor
+•	data_pagamento
+
